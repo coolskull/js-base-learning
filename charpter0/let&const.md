@@ -109,6 +109,55 @@ function test2 () {
 
 test2();
 ```
+#####例子3：？？？？？
+```js
+var foo = true , baz = 10;
+if (foo) {
+    var bar = 3;
+    if (baz > bar) {
+        console.log(baz);   //=>10
+    }
+}    
+
+var foo = true, baz = 10;
+if (foo) {
+    var bar = 3;
+}
+if (baz > bar) {
+    console.log(baz);   //=>10
+}
+
+var foo = true, baz = 10;
+if (foo) {
+    let bar = 3;
+    if (baz > bar) {
+        console.log(baz);   //=>10
+    }
+}
+
+var foo = true , baz = 10;
+if (foo) {
+    let bar = 3;
+}
+if (baz > bar) {
+    console.log(baz);   //=>Uncaught ReferenceError:bar is not defined
+}
+```
+#####例子4：
+```js
+function foo() {
+    function bar(a) {
+        i = 3; // 在外围的for循环的作用域中改变`i`
+        console.log( a + i );
+    }
+
+    for (var i=0; i<10; i++) {
+        bar( i * 2 ); // 噢，无限循环！
+    }
+}
+
+foo()
+```
 ###const基本用法
 
 `const`声明的变量与`let`声明的变量类似，它们的不同之处在于，`const`声明的变量只可以在声明时赋值，不可随意修改，否则会导致`SyntaxError`（语法错误）。

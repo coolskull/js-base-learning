@@ -18,5 +18,7 @@
     * [4.8 运算符](charpter4/section8.md)
 * [第六章 对象](charpter6/README.md)
 * 知识点
+    * [提升](charpter0/up.md)
     * [let & const](charpter0/let&const.md)
+    
     
