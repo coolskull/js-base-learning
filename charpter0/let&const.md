@@ -30,7 +30,7 @@ var messages = ["喵！", "我是一只会说话的猫！", "回调（callback�
 ```
 结果三次弹窗都为`undefined`：事实上，这个问题的答案是，循环本身及三次`timeout`回调均共享唯一的变量i。当循环结束执行时，`i`的值为3（因为messages.length的值为3），此时回调尚未被触发
 
-```js
+ ```js
 var messages = ["喵！", "我是一只会说话的猫！", "回调（callback）非常有趣!"];
 for (let i = 0; i < messages.length; i++) {  // var改为let
     setTimeout(function() {
@@ -50,7 +50,7 @@ for(var i = 0;  i< buttons.length; ++i) { // 循环为每个按钮绑定点击�
     }, false);
 }
 ```
-上面这段代码看上去貌似没问题，当我们点击任意一个按钮时，程序都会报错，提示Cannot read property 'innerText' of undefined。因为循环完成后i的值是3，buttons[3]并不存在。计数器i存在于上一层作用域中，就意味着在对它的引用被全部解除之前，它胡一直保存着循环结束后的值，即按钮的个数。
+上面这段代码看上去貌似没问题，当我们点击任意一个按钮时，程序都会报错，提示Cannot read property 'innerText' of undefined。因为循环完成后i的值是3，buttons[3]并不存在。计数器i存在于上一层作用域中，就意味着在对它的引用被全部解除之前，它会一直保存着循环结束后的值，即按钮的个数。
 
  
 ```js
@@ -157,6 +157,15 @@ function foo() {
 }
 
 foo()
+```
+```js
+
+for (var i = 1; i <= 5; i++) {
+    (function(i){setTimeout(function timer() {
+        console.log(i);
+    }, i * 1000);})(i);
+}
+// 1 2 3 4 5
 ```
 ###const基本用法
 
