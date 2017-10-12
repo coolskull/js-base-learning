@@ -8,7 +8,7 @@ console.log(a); //=>2
 ```js
 console.log(a);
 var a = 2;  //=>2
-// ===等价于===
+// ======等价于======
 var a;
 console.log(a);
 a = 2;  //=>2
@@ -20,7 +20,7 @@ function foo() {
     console.log(a);   //=>undefined
     var a = 2;
 }
-// ===等价于===
+// ======等价于======
 foo();
 function foo() {
     var a;
@@ -34,7 +34,7 @@ foo();  // 不是ReferenceError，而不是TypeError！
 var foo=function bar(){
     // ... 
 }
-// ===等价于===
+// ======等价于======
 var foo;
 foo();
 foo=function bar(){
@@ -57,7 +57,7 @@ foo = function() {
     console.log(2);
 }
 // =>1
-// ===等价于===
+// ======等价于======
 function foo() {
     console.log(1);
 }
