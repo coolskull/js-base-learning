@@ -17,7 +17,7 @@
 * [第四章 表达式和运算符](charpter4/README.md)
     * [4.8 运算符](charpter4/section8.md)
 * [第六章 对象](charpter6/README.md)
-* 知识点
+* 你不知道的JavaScript上卷
     * [提升](charpter0/up.md)
     * [let、const与块级作用域](charpter0/let&const.md)
     * [作用域闭包](charpter0/closure.md )
