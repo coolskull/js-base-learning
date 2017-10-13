@@ -1,2 +1,4 @@
-# Introduction
+# 简介
+
+JavaScript的基础使用：包括函数作用域、闭包、外加笔试题
 
