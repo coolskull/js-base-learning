@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [简介](README.md)
 * [第一章 JavaScript概述](charpter1/README.md)
     * [1.1 JavaScript语言核心](charpter1/section1.md)
     * [1.2 客户端JavaScript](charpter1/section2.md)
