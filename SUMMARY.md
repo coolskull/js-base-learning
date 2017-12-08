@@ -10,6 +10,12 @@
     * [this全面解析](charpter0/this2.md )
     * [对象](charpter0/obj.md )
     * [混合对象"类"](charpter0/class.md )
+* 面试题
+    * [基础](charpterX/x.md)
+    * [工厂模式](charpterX/factory.md)
+    * [promise](charpterX/promise.md)
+    * [柯里化](charpterX/curry.md)
+    * [reduce](charpterX/reduce.md)
     
 * [第一章 JavaScript概述](charpter1/README.md)
     * [1.1 JavaScript语言核心](charpter1/section1.md)
